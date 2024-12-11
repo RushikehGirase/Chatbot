@@ -4,11 +4,11 @@ import pickle
 import numpy as np
 import nltk
 
-from nltk.stem import WordNetLemmatizer
-from keras.models import load_model
+from nltk.stem import WordNetLemmatizer 
+from keras.models import load_model # type: ignore
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('C:\Users\Om\Downloads\create_chatbot_using_python-main\create_chatbot_using_python-main\intents.json').read())
+intents = json.loads(open('C:/Users/Om/Desktop/Chatbot/intents.json').read())
 
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
@@ -58,3 +58,4 @@ while True:
     res = get_response (ints, intents)
     print (res)
     
+
